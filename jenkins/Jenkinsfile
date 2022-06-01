@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               sh 'cd /usr/share/nginx/html/stage && git stash && git pull'
+               sh 'pwd'
+               sh 'cd /usr/share/nginx/html/stage'
+               sh 'pwd'
+               sh 'git pull'
             }
         }
      stage('Deliver') {
